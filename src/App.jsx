@@ -8,19 +8,6 @@ import AllPokemons from './pages/AllPokemons'
 import PokemonDetails from './pages/PokemonDetails'
 
 const App = () => {
-    const getAllPokemons= async ()=>{
-        const response= await axios.get("https://pokeapi.co/api/v2/pokemon?limit=150")
-        console.log(response)
-    }
-
-    const getPokemon= async (name)=>{
-        const response= await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
-        console.log(response)
-    }
-
-    useEffect(()=>{
-        getAllPokemons();
-    }, [])
 
   return (
     <div className='min-h-screen bg-black text-white'>

@@ -29,7 +29,7 @@ const Navbar = () => {
           to="/pokemons"
           className="text-4xl"
           style={({ isActive }) => ({
-            color: isActive ? "red" : "white",
+            color: isActive ? "yellow" : "white",
           })}
         >
           Pokemons

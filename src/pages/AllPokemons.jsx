@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useContext } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { PokemonDataContext } from "../context/PokemonContext";
 
 const AllPokemons = () => {
-  return (
-    <div>AllPokemons</div>
-  )
-}
+  const pokemonData = useContext(PokemonDataContext);
+  console.log(pokemonData);
 
-export default AllPokemons
+  return (
+    <div>
+      <Navbar />
+      {pokemonData.map((elem, idx)=>{
+        return <h4>{elem.name}</h4>
+      })}
+      <Footer />
+    </div>
+  );
+};
+
+export default AllPokemons;
