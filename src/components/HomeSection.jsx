@@ -6,7 +6,7 @@ const HomeSection = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="p-8 flex justify-center items-center">
+    <div className="p-8 flex justify-center items-center grow">
       <div className="title p-8 flex flex-col items-center justify-center gap-y-12 w-1/2">
         <h1 className="text-8xl">Explore the Original Pokédex</h1>
 
