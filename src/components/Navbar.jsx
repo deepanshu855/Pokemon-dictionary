@@ -3,12 +3,15 @@ import logo from "../assets/logo.png";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate= useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="h-24 bg-[#4152CC] px-12 py-4 flex justify-around items-center">
-      <div className="logo h-18 w-18 rounded-full overflow-hidden cursor-pointer" onClick={()=>{
-        navigate('/')
-      }}>
+      <div
+        className="logo h-18 w-18 rounded-full overflow-hidden cursor-pointer"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
         <img
           src={logo}
           alt=""
@@ -21,6 +24,7 @@ const Navbar = () => {
           className="text-4xl"
           style={({ isActive }) => ({
             color: isActive ? "yellow" : "white",
+            textDecoration: isActive ? "underline" : "none",
           })}
         >
           Home
@@ -30,6 +34,7 @@ const Navbar = () => {
           className="text-4xl"
           style={({ isActive }) => ({
             color: isActive ? "yellow" : "white",
+            textDecoration: isActive ? "underline" : "none",
           })}
         >
           Pokemons

@@ -10,7 +10,7 @@ const PokemonCard = ({ imageURL, name, idx, id }) => {
         navigate(`/pokemons/${id}`);
       }}
     >
-      <div className="image h-3/4 bg-white rounded-4xl mb-2 overflow-hidden">
+      <div className="image h-3/4 rounded-4xl mb-2 overflow-hidden">
         <img src={imageURL} alt="" className="h-full w-full object-contain" />
       </div>
       <h3 className="text-2xl text-gray-800">{name}</h3>

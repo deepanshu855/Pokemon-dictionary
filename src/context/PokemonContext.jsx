@@ -1,20 +1,19 @@
 import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
+import { getAllPokemons } from "../api/pokeApi";
 
 export const PokemonDataContext = createContext();
 
 const PokemonContext = ({ children }) => {
   const [pokemonsData, setPokemonsData] = useState([]);
 
-  const getAllPokemons = async () => {
-    const response = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon?limit=150",
-    );
-    setPokemonsData(response.data.results);
+  const getData = async () => {
+    const response = await getAllPokemons();
+    setPokemonsData(response)
   };
 
   useEffect(() => {
-    getAllPokemons();
+    getData();
   }, []);
 
   return (
